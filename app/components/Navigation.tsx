@@ -7,7 +7,12 @@ import { Menu, X } from 'lucide-react';
 
 const navItems = [
   { href: '/', label: 'INICIO' },
+  { href: '/shop', label: 'SHOP' },
   { href: '/biografia', label: 'BIOGRAFÍA' },
+  { href: '/publicaciones', label: 'PUBLICACIONES' },
+  { href: '/multimedia', label: 'MULTIMEDIA' },
+  { href: '/galeria', label: 'GALERÍA' },
+  { href: '/prensa', label: 'PRENSA' },
 ];
 
 export default function Navigation() {

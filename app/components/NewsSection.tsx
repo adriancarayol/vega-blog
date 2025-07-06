@@ -7,9 +7,9 @@ export default function NewsSection() {
         NOVEDAD
       </h2>
       <div className="text-center">
-        <h3 className="text-2xl font-bold mb-2">LOS PRIMEROS FRÍOS</h3>
+        <h3 className="text-2xl font-bold mb-2">Lo Salvaje</h3>
         <p className="text-gray-600 mb-6">Vega Cerezo</p>
-        <a 
+        <a
           href="https://www.editorialparamo.com/online-store/Los-primeros-fríos-de-Vega-Cerezo-p637954525"
           target="_blank"
           rel="noopener noreferrer"
@@ -17,7 +17,7 @@ export default function NewsSection() {
         >
           <Image
             src="/images/books/book1.jpg"
-            alt="Los primeros fríos - Vega Cerezo"
+            alt="Lo Salvaje - Vega Cerezo"
             fill
             className="object-contain rounded-lg shadow-lg"
             sizes="(max-width: 768px) 188px, 188px"

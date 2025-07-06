@@ -6,7 +6,7 @@ const books = [
     title: 'Los primeros fríos',
     author: 'Vega Cerezo',
     type: 'Poesía',
-    image: '/images/books/book1.jpg',
+    image: '/images/books/los-primeros-frios.jpg',
     link: 'https://www.editorialparamo.com/online-store/Los-primeros-fríos-de-Vega-Cerezo-p637954525'
   },
   {
@@ -14,7 +14,7 @@ const books = [
     title: 'Lo salvaje',
     author: 'Vega Cerezo',
     type: 'Poesía',
-    image: '/images/books/book2.jpg',
+    image: '/images/books/book1.jpg',
     link: 'https://www.todostuslibros.com/libros/lo-salvaje_978-84-946307-9-8'
   },
   {
@@ -30,7 +30,7 @@ const books = [
     title: 'La sirena dormida',
     author: 'Vega Cerezo',
     type: 'Poesía',
-    image: '/images/books/book4.jpg',
+    image: '/images/books/book2.jpg',
     link: 'https://www.todostuslibros.com/libros/la-sirena-dormida_978-84-946307-2-9'
   }
 ];
