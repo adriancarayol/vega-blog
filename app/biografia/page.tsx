@@ -25,8 +25,19 @@ export default function Biografia() {
       </header>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-amber-700 mb-3">Sobre mí</h2>
-        <p className="text-gray-700 leading-relaxed whitespace-pre-line">{data.bio}</p>
+        <h2 className="text-2xl font-semibold text-amber-700 mb-6">Sobre mí</h2>
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
+          <p className="text-gray-700 leading-relaxed whitespace-pre-line">{data.bio}</p>
+          <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+            <video 
+              controls 
+              className="w-full h-full object-cover"
+              src="/videos/video.mp4"
+            >
+              Tu navegador no soporta el elemento de video.
+            </video>
+          </div>
+        </div>
       </section>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -58,7 +69,7 @@ export default function Biografia() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-white text-sm font-medium drop-shadow-lg">Retrato</p>
+                  <p className="text-white text-sm font-medium drop-shadow-lg">Juan Rubio</p>
                 </div>
               </div>
             </div>
@@ -74,7 +85,7 @@ export default function Biografia() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-white text-sm font-medium drop-shadow-lg">Evento literario</p>
+                  <p className="text-white text-sm font-medium drop-shadow-lg">Frederic Volkringer</p>
                 </div>
               </div>
             </div>
@@ -90,7 +101,7 @@ export default function Biografia() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-white text-sm font-medium drop-shadow-lg">Presentación de libro</p>
+                  <p className="text-white text-sm font-medium drop-shadow-lg">Juan José Ballester</p>
                 </div>
               </div>
             </div>
