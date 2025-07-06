@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vega Cerezo - Blog Literario",
+  title: "Vega Cerezo - Blog",
   description: "Blog literario de Vega Cerezo con biografía, publicaciones, galería y prensa",
 };
 
