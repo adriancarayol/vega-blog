@@ -3,14 +3,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Instagram, Twitter, Facebook, BookOpen, Image as ImageIcon, User, Home, Award } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { href: '/', label: 'Inicio', Icon: Home },
-  { href: '/biografia', label: 'Biografía', Icon: User },
-  { href: '/publicaciones', label: 'Publicaciones', Icon: BookOpen },
-  { href: '/galeria', label: 'Galería', Icon: ImageIcon },
-  { href: '/prensa', label: 'Prensa', Icon: Award },
+  { href: '/', label: 'INICIO' },
+  { href: '/biografia', label: 'BIOGRAFÍA' },
 ];
 
 export default function Navigation() {
@@ -18,30 +15,23 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-40">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Site Title */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-3xl font-serif font-bold text-amber-700 hover:text-amber-800 transition-colors">
-              Vega Cerezo
-            </Link>
-          </div>
+    <nav className="bg-gray-900 text-white sticky top-0 z-40">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-center h-16">
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <ul className="ml-10 flex items-baseline space-x-2">
-              {navItems.map(({ href, label, Icon }) => (
-                <li key={href} className="mx-2">
+            <ul className="flex items-center space-x-6">
+              {navItems.map(({ href, label }) => (
+                <li key={href}>
                   <Link
                     href={href}
-                    className={`flex items-center px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ease-in-out
+                    className={`px-4 py-2 text-sm tracking-wider transition-colors duration-200
                       ${pathname === href
-                        ? 'bg-amber-700 text-white shadow-lg'
-                        : 'text-amber-700 hover:bg-amber-100 hover:text-amber-800'
+                        ? 'text-white border-b-2 border-white'
+                        : 'text-gray-300 hover:text-white'
                       }`}
                   >
-                    <Icon size={18} className="mr-2" />
                     {label}
                   </Link>
                 </li>
@@ -54,7 +44,7 @@ export default function Navigation() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               type="button"
-              className="text-amber-700 hover:text-amber-800 focus:outline-none p-2 rounded-md hover:bg-amber-100"
+              className="text-white hover:text-gray-300 focus:outline-none p-2"
               aria-controls="mobile-menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -67,33 +57,24 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg pb-3 z-30 border-t border-amber-100" id="mobile-menu">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-gray-900 shadow-lg pb-3 z-30" id="mobile-menu">
           <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map(({ href, label, Icon }) => (
+            {navItems.map(({ href, label }) => (
               <li key={href} className="my-2">
                 <Link
                   href={href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ease-in-out
+                  className={`block px-4 py-2 text-sm tracking-wider transition-colors duration-200
                     ${pathname === href
-                      ? 'bg-amber-700 text-white shadow-lg'
-                      : 'text-amber-700 hover:bg-amber-100 hover:text-amber-800'
+                      ? 'text-white border-l-2 border-white pl-3'
+                      : 'text-gray-300 hover:text-white'
                     }`}
                 >
-                  <Icon size={18} className="mr-2" />
                   {label}
                 </Link>
               </li>
             ))}
           </ul>
-          <div className="mt-4 pt-4 border-t border-amber-200 px-4">
-            <p className="text-sm text-amber-600 mb-2 text-center">Lorem ipsum Vega Cerezo:</p>
-            <div className="flex justify-center space-x-4">
-              <a href="#" className="text-amber-600 hover:text-amber-800"><Instagram size={24} /></a>
-              <a href="#" className="text-amber-600 hover:text-amber-800"><Twitter size={24} /></a>
-              <a href="#" className="text-amber-600 hover:text-amber-800"><Facebook size={24} /></a>
-            </div>
-          </div>
         </div>
       )}
     </nav>
